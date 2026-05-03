@@ -31,7 +31,7 @@ public class Task5 {
             System.out.println("Invalid role.");
         }
 
-        // Show permissions
+        
         System.out.println("\nAccess Rights:");
         System.out.println("Readable: " + file.canRead());
         System.out.println("Writable: " + file.canWrite());
