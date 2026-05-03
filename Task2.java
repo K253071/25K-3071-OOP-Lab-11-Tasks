@@ -24,7 +24,7 @@ public class Task2 {
         int totalCredits = 0;
         final int maxCredits = 15;
 
-        // Add basic courses
+        
         String[] baseCourses = {"Math", "English", "Physics"};
 
         for (String course : baseCourses) {
@@ -34,7 +34,7 @@ public class Task2 {
             }
         }
 
-        // Check OOP eligibility
+        
         if (pfLab >= 50 && pfTheory >= 50) {
             if (totalCredits + 6 <= maxCredits) {
                 courses.add("OOP Lab");
@@ -45,7 +45,7 @@ public class Task2 {
             System.out.println("Not eligible for OOP courses.");
         }
 
-        // Write to file
+        
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
             bw.write("Name: " + name);
             bw.newLine();
@@ -65,7 +65,7 @@ public class Task2 {
             System.out.println("Error writing file");
         }
 
-        // Read and display
+        
         System.out.println("\nFile Content:");
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
