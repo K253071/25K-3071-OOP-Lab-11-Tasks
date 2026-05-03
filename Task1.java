@@ -13,7 +13,7 @@ public class Task1 {
 
         String path = System.getProperty("user.home") + "/Desktop/list.txt";
 
-        // Write to file
+        
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             for (String item : list) {
                 bw.write(item);
@@ -23,7 +23,7 @@ public class Task1 {
             System.out.println("Error writing file");
         }
 
-        // Read from file
+        
         System.out.println("\nReading from file:");
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -34,7 +34,7 @@ public class Task1 {
             System.out.println("Error reading file");
         }
 
-        // Delete file
+        
         File file = new File(path);
         if (file.delete()) {
             System.out.println("\nFile deleted.");
